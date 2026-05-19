@@ -1,0 +1,9 @@
+{
+  "name": "wiki-build",
+  "displayName": "Wiki Build",
+  "version": "1.0.0",
+  "description": "Skills for building a structured knowledge wiki from books: ingest ebooks, process chapters, extract concepts and examples, link mentions, extract orgs, build concept maps, and generate summaries.",
+  "author": {
+    "name": "Thanh Dinh Khac"
+  }
+}

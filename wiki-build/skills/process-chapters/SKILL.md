@@ -31,9 +31,9 @@ Capture the filename prefix (for example `09-`, `14-`) so summary filenames mirr
 Create one summary file per chapter in `SUMMARY_DIR`.
 
 Filename pattern:
-- `<prefix>-<Simplified Title>.md`
+- `<prefix>-Chapter <chapter number>-<Simplified Title>.md`
 
-Structure: check `SUMMARY_DIR/TEMPLATE.md` for structure. If it does not exist, suggested structure:
+Structure: check `SUMMARY_DIR/TEMPLATE.md` for structure. If it does not exist, propose an approrpiate one, or use the suggested structure:
 
 ```markdown
 # Chapter N: [Title]

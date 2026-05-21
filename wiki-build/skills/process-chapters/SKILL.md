@@ -206,6 +206,7 @@ Follow the same templates as Steps 3 and 4. A stub should never remain in the va
 
 ## Conventions
 
+- Replace error-prone characters in file names (e.g. slash) with a suitable alternative (e.g. dash)
 - Keep filenames human-readable and stable.
 - Use Obsidian wiki links in frontmatter and body.
 - Check for existing files before creating new ones.

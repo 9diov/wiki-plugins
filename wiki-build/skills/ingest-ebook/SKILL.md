@@ -40,6 +40,25 @@ Use a PDF extraction tool to generate Markdown from the text.
 
 Prefer `PyMuPDF4LLM` with OCR enabled (`force_ocr=True`) for scanned or image-only PDFs. If plain extraction returns empty text, rerun with OCR.
 
+If PyMuPDF produces poor results (garbled text, missed structure, complex layout, scanned pages that OCR cannot handle well), fall back to the **datalab.to Marker API** via the bundled script:
+
+```bash
+# Ensure DATALAB_API_KEY is set, then:
+python wiki-build/scripts/pdf_to_markdown.py <path/to/book.pdf> \
+  --out-dir sources/<book-id>/_pdf_raw \
+  --mode accurate \
+  --use-llm
+```
+
+Key options:
+- `--mode accurate` — higher-quality extraction (slower); also `fast` or `balanced`
+- `--use-llm` — LLM-enhanced accuracy for complex layouts
+- `--force-ocr` — force OCR on every page (scanned books)
+- `--page-range 0,5-10` — convert a subset of pages (0-indexed)
+- `--max-pages N` — cap the number of pages converted
+
+The script polls automatically and writes `<stem>.md` plus an `images/` subfolder into `--out-dir`. Check the printed quality score: if it is below 3/5 consider rerunning with `--mode accurate` or `--use-llm`.
+
 If chapter detection is unreliable, split into page-range files:
 - `00-Pages 1-12.md`, `01-Pages 13-24.md`, …
 

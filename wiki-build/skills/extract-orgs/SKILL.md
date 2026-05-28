@@ -1,8 +1,6 @@
 ---
 name: extract-orgs
-description: Go through one book's example files and generate org notes in
-content/org/. Creates new org notes or updates existing ones. Use when
-processing a new book's examples to populate the org index.
+description: Go through one book's example files and generate org notes in content/org/. Creates new org notes or updates existing ones. Use when processing a new book's examples to populate the org index.
 ---
 
 Extract org notes from a book's example files.
